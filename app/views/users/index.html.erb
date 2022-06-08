@@ -1,0 +1,27 @@
+<div class='title center'>
+    User List
+</div>
+<table class='Variables'>
+    <thead>
+        <tr>
+            <th>email</th>
+            <th class='center'>authority</th>
+            <th class='center'>active</th>   
+            <th class='center'>create_at</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |user| %>
+            <tr>
+                <td><%= user.email %></td>
+                <td class='center'><%= user.authority %></td>
+                <td class='center'><%= link_to user.active ? 'O' : 'X', toggle_active_user_path(user_id: user.id), method: :post %></td>
+                <td class='center'><%= user.created_at.to_date %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div class='center paginate'>
+    <%= paginate @users %>
+</div>

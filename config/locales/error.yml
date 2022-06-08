@@ -8,3 +8,4 @@ kr:
         blank: '%{attribute}이(가) 비어있습니다.'
         taken: '%{attribute}은(는) 이미 존재합니다.'
         inclusion: '%{attribute}이(가) 정상적인 값이 아닙니다.'
+        record_invalid: 레코드가 유효하지 않음

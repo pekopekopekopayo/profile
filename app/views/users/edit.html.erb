@@ -10,23 +10,27 @@
 <% end %>
 
 <section class="hero">
-    <%= form_with model: @user, url: user_path, local: true, method: :post do |form| %>
+    <%= form_with model: @user, url: user_update_path, local: true, method: :post do |form| %>
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
                     <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-                        
                         <div class="field">
-                            <label for="" class="label">Email</label>
-                            <div class="control has-icons-left">
-                                <%= form.email_field :email, class: 'input' %>
-                                <span class="icon is-small is-left">
-                                    <i class="fa fa-envelope"></i>
-                                </span>
-                            </div>
+                            <label for="" class="label-show">Email:</label>
+                            <label for="" class="label-show"><%= @user.email %></label>
+                        </div>
+
+                        <div class="field">
+                            <label for="" class="label-show">Authority:</label>
+                            <label for="" class="label-show"><%= @user.authority %></label>
                         </div>
                         
-                        <label for="" class="label">Password</label>
+                        <div class="field">
+                            <label for="" class="label-show">Created_at:</label>
+                            <label for="" class="label-show"><%= @user.created_at.to_date %></label>
+                        </div>
+
+                        <label for="" class="label-show">Password</label>
 
                         <div class="control has-icons-left">
                             <%= form.password_field :password, class: 'input' %>
@@ -35,7 +39,7 @@
                             </span>
                         </div>
 
-                        <label for="" class="label">Confirm Password</label>
+                        <label for="" class="label-show">Confirm Password</label>
 
                         <div class="control has-icons-left">
                             <%= form.password_field :password_confirmation, class: 'input' %>
@@ -43,18 +47,10 @@
                             <i class="fa fa-lock"></i>
                             </span>
                         </div>
-                        
-                        <label for="" class="label">Authority</label>
-                        <div class="control radio-box">
-                            <%= form.label :authority_2, 'Admin' %>
-                            <%= form.radio_button :authority, '2' %>
-                            <%= form.label :authority_3, 'Customer' %>
-                            <%= form.radio_button :authority, '3', checked: true %>
-                        </div>
 
                         <hr>
                         <div style="display: flex; justify-content: center; "class="is-justify-content-center">
-                            <%= form.submit 'Submit', class: 'button is-success'%>
+                            <%= form.submit 'login', class: 'button is-success'%>
                         </div>
                     </div>
                 </div>

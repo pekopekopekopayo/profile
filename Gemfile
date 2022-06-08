@@ -30,6 +30,7 @@ gem 'pry'
 gem "bulma-rails", "~> 0.8.0"
 gem 'dotenv-rails'
 gem 'jwt'
+gem 'kaminari'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

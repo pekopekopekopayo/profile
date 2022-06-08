@@ -16,7 +16,7 @@
  @import "bulma";
 
  .center{
-   text-align: center;
+  text-align: center !important;
  }
 
 
@@ -40,6 +40,39 @@
 }
 
 
-.label {
+.label-show {
+  color: black !important;
+  font-size: 16px;
   margin-top: 10px;
+}
+
+
+.content {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+.pagination>li>a {          
+  border: none;  
+  color: #696969;
+  height: 50px;
+  width: 100px;
+  font-size: 16px;
+}
+
+.pagination>.active>a {     
+  background: #93c9ff;     
+  border-radius: 15px;     
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 15px;    
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
 }
