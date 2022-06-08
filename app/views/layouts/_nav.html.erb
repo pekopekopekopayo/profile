@@ -1,0 +1,25 @@
+<nav>
+    <span>
+        <%= link_to home_path do %>
+                <%= image_tag "main.png", width: 150, height: 80 %>
+        <% end %>
+    </span>
+    <% if session[:user_id].present? %>
+        <span class="item-box">
+            <div class="flex-box">
+
+                <div class="flex-box-item">
+                    <%= link_to 'Create User', new_user_path, class: 'button is-primary'%>
+                </div>
+
+                <div class="flex-box-item">
+                    <%= link_to 'User List', users_path, class: 'button is-primary'%>
+                </div>
+
+                <div class="flex-box-item">
+                    <%= link_to 'Logout', logout_path, class: 'button is-primary'%>
+                </div>
+            </div>
+        </span>
+    <% end %>
+</nav>

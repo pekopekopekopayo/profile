@@ -9,31 +9,9 @@
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	</head>
 
-	<body>	
+	<body>
 
-		<nav class="navbar is-transparent">
-			<div class="navbar-brand">
-				<%= link_to home_path do %>
-					 <%= image_tag "main.png", width: 150, height: 80 %>
-				<% end %>
-				<div class="navbar-burger" data-target="navbarExampleTransparentExample">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-			<% if session[:user_id].present? %>
-				<div class="navbar-end">
-					<div class="navbar-item">
-					<div class="field is-grouped">
-						<p class="control">
-					<%= link_to 'logout', logout_path, class: 'button is-primary'%>
-						</p>
-					</div>
-					</div>
-				</div>
-			<% end %>
-		</nav>
+		<%= render 'layouts/nav' %>
 		
 		<% if flash['info'].present? %>
 			<div class="notification is-primary">

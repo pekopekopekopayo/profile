@@ -1,0 +1,15 @@
+kr:
+  activerecord:
+    models:
+      user: '유저'
+    attributes:
+      user:
+        email: '이메일' 
+        password_digest: '패스워드'
+        password: 2차인증 패스워드
+        authority: 권한
+    errors:
+      models:
+        user: '유저'
+      messages:
+        invalid: "%{attribute}이(가) 유효하지않습니다. 패스워드는 8자 이상 대소문자와 숫자를 포함해 주세요."

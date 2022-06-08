@@ -14,3 +14,32 @@
  *= require_self
  */
  @import "bulma";
+
+ .center{
+   text-align: center;
+ }
+
+
+ .item-box {
+    height: 100px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 35px;
+ }
+ .flex-box{
+   display: flex;
+ }
+
+.flex-box-item {
+   margin-left: 25px;
+ }
+
+
+.radio-box{
+  margin-top: 10px;
+}
+
+
+.label {
+  margin-top: 10px;
+}

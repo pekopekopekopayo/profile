@@ -1,0 +1,10 @@
+kr:
+  activerecord:
+    errors:
+      messages:
+        too_short: "%{attribute}가 너무 짧습니다."
+        confirmation: "두 %{attribute}가 일치하지 않습니다."
+        invalid: "%{attribute}이(가) 유효하지않습니다." 
+        blank: '%{attribute}이(가) 비어있습니다.'
+        taken: '%{attribute}은(는) 이미 존재합니다.'
+        inclusion: '%{attribute}이(가) 정상적인 값이 아닙니다.'
