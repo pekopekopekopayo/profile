@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function close_div(e){
+    console.log(e);
+    e.parentElement.remove();
+}

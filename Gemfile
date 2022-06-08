@@ -25,7 +25,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'bcrypt', '~> 3.1.7'
+gem 'pry'
+gem "bulma-rails", "~> 0.8.0"
+gem 'dotenv-rails'
+gem 'jwt'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

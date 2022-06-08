@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Profile</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+	<head>
+		<title>Profile</title>
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
 
-  <body>
-    <%= yield %>
-  </body>
+	<body>	
+
+		<nav class="navbar is-transparent">
+			<div class="navbar-brand">
+				<%= link_to home_path do %>
+					 <%= image_tag "main.png", width: 150, height: 80 %>
+				<% end %>
+				<div class="navbar-burger" data-target="navbarExampleTransparentExample">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<% if session[:user_id].present? %>
+				<div class="navbar-end">
+					<div class="navbar-item">
+					<div class="field is-grouped">
+						<p class="control">
+					<%= link_to 'logout', logout_path, class: 'button is-primary'%>
+						</p>
+					</div>
+					</div>
+				</div>
+			<% end %>
+		</nav>
+		
+		<% if flash['info'].present? %>
+			<div class="notification is-primary">
+				<%= flash['info'] %>
+				<button class="delete" onclick="close_div(this)"></button>
+			</div>
+		<% end %>
+
+		<% if flash['error'].present? %>
+			<div class="notification is-danger" >
+				<%= flash['error'] %>
+				<button class="delete" onclick="close_div(this)"></button>
+			</div>
+		<% end %>
+
+		<%= yield %>
+	</body>
 </html>
